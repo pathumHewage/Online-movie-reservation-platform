@@ -20,11 +20,11 @@ const orderSchema = mongoose.Schema(
       },
     ],
 
-    shippingAddress: {
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      postalCode: { type: String, required: true },
-      country: { type: String, required: true },
+    bookingAddress: {
+      email: { type: String, required: true },
+      payer: { type: String, required: true },
+      phone1: { type: String, required: true },
+      exPhone2: { type: String, required: true },
     },
     paymentMethod: {
       type: String,
@@ -41,7 +41,7 @@ const orderSchema = mongoose.Schema(
       required: true,
       default: 0.0,
     },
-    shippingPrice: {
+    bookingPrice: {
       type: Number,
       required: true,
       default: 0.0,
